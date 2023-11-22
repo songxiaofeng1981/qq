@@ -130,6 +130,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: staic-html
+      
+      # 打印文件树结构以确认文件位置
+      - name: Print File Tree
+        run: tree  # 或 'tree staic-html' 来只打印该目录的结构
+
 
       # 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
