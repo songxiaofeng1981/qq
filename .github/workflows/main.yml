@@ -109,8 +109,9 @@ jobs:
          bundle install
       - name: Build with Jekyll
         run: |
-         cd app
-         bundle exec jekyll build --baseurl qq
+          REPO_NAME=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
+          cd app
+          bundle exec jekyll build --baseurl $REPO_NAME
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v2
@@ -127,7 +128,7 @@ jobs:
 
       # 下载之前上传的工件
       - name: Download Artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: staic-html
       
