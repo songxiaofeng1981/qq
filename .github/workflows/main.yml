@@ -136,16 +136,18 @@ jobs:
       - name: Print File Tree
         run: tree  # 或 'tree staic-html' 来只打印该目录的结构
 
-      - name: Extract Artifact
+      - name: Create Directory and Extract Artifact
         run: |
-         tar -xvf artifact.tar -C ./_site
+          mkdir -p ./_site  # 创建 _site 目录
+          tar -xvf artifact.tar -C ./_site  # 解压缩到 _site 目录
+
 
       # 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: _site
+          folder: staic-html
 
 
 
