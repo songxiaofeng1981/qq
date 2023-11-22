@@ -1,0 +1,142 @@
+name: Compress Images to WebP
+
+on: [push]
+
+jobs:
+  optimize-images:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install ImageMagick
+      run: sudo apt-get install imagemagick
+
+    - name: Rename Images
+      run: |
+        count=1
+        for file in $(find . -type f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png \)); do
+          date=$(identify -verbose "$file" | grep "exif:DateTimeOriginal:" | awk '{print $2}' | sed 's/:/-/g' | sed 's/ //g')
+          if [ ! -z "$date" ]; then
+            formattedDate=$(date -d "$date" +'%Y%m%d')
+            randomNumber=$(shuf -i 1-1000 -n 1)
+            newName="${formattedDate}${randomNumber}-${file##*/}"
+          else
+            newName=$(printf "%04d-%s" $count "${file##*/}")
+            ((count++))
+          fi
+          mv "$file" "$(dirname "$file")/$newName"
+        done
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install Squoosh CLI
+      run: npm install @squoosh/cli -g
+
+    - name: Compress Images to WebP and Log Size
+      run: |
+        mkdir -p after
+        for file in $(find . -type f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png \)); do
+          originalSize=$(du -m "$file" | cut -f1)
+          squoosh-cli --webp '{}' "$file"
+        done
+        for compressedFile in $(find . -type f -iname \*.webp); do
+          if [ -f "$compressedFile" ]; then
+            mv "$compressedFile" "after/"
+            compressedSize=$(du -m "after/$(basename "$compressedFile")" | cut -f1)
+            echo "Compressed size: ${compressedSize}MB"
+          else
+            echo "Error: Compressed file not found - $compressedFile"
+          fi
+        done
+
+    
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: optimize-images
+        path: after
+
+  compile-static-html:
+    needs: optimize-images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # 下载之前上传的工件
+      - name: Download Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: optimize-images
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          repository: s110b/360
+          path: app
+      - name: Clear and Copy Files
+        run: |
+          rm -rf app/photos/original/*
+          echo "Cleared app/photos/original directory."
+          mkdir -p app/photos/original
+          find app2 -type f -name '*.webp' -exec cp {} app/photos/original/ \;
+          echo "Files copied from app2/after to app/photos/original."
+              # 打印 app/photos/original 目录的内容
+          echo "Listing contents of app/photos/original:"
+          ls -alh app/photos/original/
+          tree app || ls -alRh app
+          # 打印 app2 目录的结构
+          echo "Listing directory structure of app2:"
+          tree app2 || ls -alRh app2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+        with:
+          ruby-version: '3.1' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Install libvips
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libvips
+      - name: Install Dependencies
+        run: |
+         cd app
+         bundle install
+      - name: Build with Jekyll
+        run: |
+         cd app
+         bundle exec jekyll build --baseurl qq
+      - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: app/_site  # 指向正确的 _site 目录
+          name: staic-html
+
+  deploy:
+    needs: compile-static-html
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # 下载之前上传的工件
+      - name: Download Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: staic-html
+
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: staic-html
+
+
+
