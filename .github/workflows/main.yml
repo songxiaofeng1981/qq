@@ -83,15 +83,15 @@ jobs:
           rm -rf app/photos/original/*
           echo "Cleared app/photos/original directory."
           mkdir -p app/photos/original
-          find app2 -type f -name '*.webp' -exec cp {} app/photos/original/ \;
-          echo "Files copied from app2/after to app/photos/original."
+          find ./ -type f -name '*.webp' -exec cp {} app/photos/original/ \;
+          echo "Files copied from .//after to app/photos/original."
               # 打印 app/photos/original 目录的内容
           echo "Listing contents of app/photos/original:"
           ls -alh app/photos/original/
           tree app || ls -alRh app
-          # 打印 app2 目录的结构
-          echo "Listing directory structure of app2:"
-          tree app2 || ls -alRh app2
+          # 打印 ./ 目录的结构
+          echo "Listing directory structure of ./:"
+          tree ./ || ls -alRh ./
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
