@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom">
+    <generator uri="https://github.com/waschinski/photo-stream">Photo Stream</generator>
+    <link href="https://maxvoltar.photo/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="https://maxvoltar.photo" rel="alternate" type="text/html"/>
+    <updated>2023-11-22T12:57:52+00:00</updated>
+    <id>2023-11-22T12:57:52+00:00</id>
+    <title type="html"><![CDATA[maxvoltar.photo]]></title>
+    <subtitle><![CDATA[@maxvoltar's minimalistic, self-hosted photo stream.]]></subtitle>
+    <author>
+      <name><![CDATA[Tim Van Damme]]></name>
+      <email>tim@maxvoltar.be</email>
+      <uri>https://maxvoltar.com</uri>
+    </author>
+    <entry>
+      <title type="html">20200609282-039</title>
+      <link href="https://maxvoltar.photo/20200609282-039/" rel="alternate" type="text/html" title="20200609282-039" />
+      <published></published>
+      <updated></updated>
+      <id>https://maxvoltar.photo/20200609282-039/</id>
+      <content type="html"><![CDATA[<figure><a href="https://maxvoltar.photo/20200609282-039/"><img src="https://maxvoltar.photo/qq/photos/large/20200609282-039-686656.webp" alt="20200609282-039" /></a></figure>
+      ]]>
+    </content>
+    <author>
+      <name><![CDATA[Tim Van Damme]]></name>
+      <email>tim@maxvoltar.be</email>
+      <uri>https://maxvoltar.com</uri>
+    </author>
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://maxvoltar.photo/qq/photos/large/20200609282-039-686656.webp" />
+      <media:content medium="image" url="https://maxvoltar.photo/qq/photos/large/20200609282-039-686656.webp" xmlns:media="http://search.yahoo.com/mrss/" />
+      </entry>
+      <entry>
+        <title type="html">0007-1456046255-0</title>
+        <link href="https://maxvoltar.photo/0007-1456046255-0/" rel="alternate" type="text/html" title="0007-1456046255-0" />
+        <published></published>
+        <updated></updated>
+        <id>https://maxvoltar.photo/0007-1456046255-0/</id>
+        <content type="html"><![CDATA[<figure><a href="https://maxvoltar.photo/0007-1456046255-0/"><img src="https://maxvoltar.photo/qq/photos/large/0007-1456046255-0-686656.webp" alt="0007-1456046255-0" /></a></figure>
+        ]]>
+      </content>
+      <author>
+        <name><![CDATA[Tim Van Damme]]></name>
+        <email>tim@maxvoltar.be</email>
+        <uri>https://maxvoltar.com</uri>
+      </author>
+      <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://maxvoltar.photo/qq/photos/large/0007-1456046255-0-686656.webp" />
+        <media:content medium="image" url="https://maxvoltar.photo/qq/photos/large/0007-1456046255-0-686656.webp" xmlns:media="http://search.yahoo.com/mrss/" />
+        </entry>
+        <entry>
+          <title type="html">0006-quote-freedom-has-many-difficulties-and-democracy-is-not-perfect-but-we-have-never-had-to-john-f-kennedy-66-59-81</title>
+          <link href="https://maxvoltar.photo/0006-quote-freedom-has-many-difficulties-and-democracy-is-not-perfect-but-we-have-never-had-to-john-f-kennedy-66-59-81/" rel="alternate" type="text/html" title="0006-quote-freedom-has-many-difficulties-and-democracy-is-not-perfect-but-we-have-never-had-to-john-f-kennedy-66-59-81" />
+          <published></published>
+          <updated></updated>
+          <id>https://maxvoltar.photo/0006-quote-freedom-has-many-difficulties-and-democracy-is-not-perfect-but-we-have-never-had-to-john-f-kennedy-66-59-81/</id>
+          <content type="html"><![CDATA[<figure><a href="https://maxvoltar.photo/0006-quote-freedom-has-many-difficulties-and-democracy-is-not-perfect-but-we-have-never-had-to-john-f-kennedy-66-59-81/"><img src="https://maxvoltar.photo/qq/photos/large/0006-quote-freedom-has-many-difficulties-and-democracy-is-not-perfect-but-we-have-never-had-to-john-f-kennedy-66-59-81-686656.webp" alt="0006-quote-freedom-has-many-difficulties-and-democracy-is-not-perfect-but-we-have-never-had-to-john-f-kennedy-66-59-81" /></a></figure>
+          ]]>
+        </content>
+        <author>
+          <name><![CDATA[Tim Van Damme]]></name>
+          <email>tim@maxvoltar.be</email>
+          <uri>https://maxvoltar.com</uri>
+        </author>
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://maxvoltar.photo/qq/photos/large/0006-quote-freedom-has-many-difficulties-and-democracy-is-not-perfect-but-we-have-never-had-to-john-f-kennedy-66-59-81-686656.webp" />
+          <media:content medium="image" url="https://maxvoltar.photo/qq/photos/large/0006-quote-freedom-has-many-difficulties-and-democracy-is-not-perfect-but-we-have-never-had-to-john-f-kennedy-66-59-81-686656.webp" xmlns:media="http://search.yahoo.com/mrss/" />
+          </entry>
+          <entry>
+            <title type="html">0005-宗教和科学</title>
+            <link href="https://maxvoltar.photo/0005-宗教和科学/" rel="alternate" type="text/html" title="0005-宗教和科学" />
+            <published></published>
+            <updated></updated>
+            <id>https://maxvoltar.photo/0005-宗教和科学/</id>
+            <content type="html"><![CDATA[<figure><a href="https://maxvoltar.photo/0005-宗教和科学/"><img src="https://maxvoltar.photo/qq/photos/large/0005-%E5%AE%97%E6%95%99%E5%92%8C%E7%A7%91%E5%AD%A6-686656.webp" alt="0005-宗教和科学" /></a></figure>
+            ]]>
+          </content>
+          <author>
+            <name><![CDATA[Tim Van Damme]]></name>
+            <email>tim@maxvoltar.be</email>
+            <uri>https://maxvoltar.com</uri>
+          </author>
+          <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://maxvoltar.photo/qq/photos/large/0005-%E5%AE%97%E6%95%99%E5%92%8C%E7%A7%91%E5%AD%A6-686656.webp" />
+            <media:content medium="image" url="https://maxvoltar.photo/qq/photos/large/0005-%E5%AE%97%E6%95%99%E5%92%8C%E7%A7%91%E5%AD%A6-686656.webp" xmlns:media="http://search.yahoo.com/mrss/" />
+            </entry>
+            <entry>
+              <title type="html">0004-Do-You-Have-A-Step-by-Step-Blog-Writing-Process-Here’s-One-3</title>
+              <link href="https://maxvoltar.photo/0004-do-you-have-a-step-by-step-blog-writing-process-here-s-one-3/" rel="alternate" type="text/html" title="0004-Do-You-Have-A-Step-by-Step-Blog-Writing-Process-Here’s-One-3" />
+              <published></published>
+              <updated></updated>
+              <id>https://maxvoltar.photo/0004-do-you-have-a-step-by-step-blog-writing-process-here-s-one-3/</id>
+              <content type="html"><![CDATA[<figure><a href="https://maxvoltar.photo/0004-do-you-have-a-step-by-step-blog-writing-process-here-s-one-3/"><img src="https://maxvoltar.photo/qq/photos/large/0004-Do-You-Have-A-Step-by-Step-Blog-Writing-Process-Here%E2%80%99s-One-3-686656.webp" alt="0004-Do-You-Have-A-Step-by-Step-Blog-Writing-Process-Here’s-One-3" /></a></figure>
+              ]]>
+            </content>
+            <author>
+              <name><![CDATA[Tim Van Damme]]></name>
+              <email>tim@maxvoltar.be</email>
+              <uri>https://maxvoltar.com</uri>
+            </author>
+            <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://maxvoltar.photo/qq/photos/large/0004-Do-You-Have-A-Step-by-Step-Blog-Writing-Process-Here%E2%80%99s-One-3-686656.webp" />
+              <media:content medium="image" url="https://maxvoltar.photo/qq/photos/large/0004-Do-You-Have-A-Step-by-Step-Blog-Writing-Process-Here%E2%80%99s-One-3-686656.webp" xmlns:media="http://search.yahoo.com/mrss/" />
+              </entry>
+              <entry>
+                <title type="html">0003-041</title>
+                <link href="https://maxvoltar.photo/0003-041/" rel="alternate" type="text/html" title="0003-041" />
+                <published></published>
+                <updated></updated>
+                <id>https://maxvoltar.photo/0003-041/</id>
+                <content type="html"><![CDATA[<figure><a href="https://maxvoltar.photo/0003-041/"><img src="https://maxvoltar.photo/qq/photos/large/0003-041-686656.webp" alt="0003-041" /></a></figure>
+                ]]>
+              </content>
+              <author>
+                <name><![CDATA[Tim Van Damme]]></name>
+                <email>tim@maxvoltar.be</email>
+                <uri>https://maxvoltar.com</uri>
+              </author>
+              <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://maxvoltar.photo/qq/photos/large/0003-041-686656.webp" />
+                <media:content medium="image" url="https://maxvoltar.photo/qq/photos/large/0003-041-686656.webp" xmlns:media="http://search.yahoo.com/mrss/" />
+                </entry>
+                <entry>
+                  <title type="html">0002-040</title>
+                  <link href="https://maxvoltar.photo/0002-040/" rel="alternate" type="text/html" title="0002-040" />
+                  <published></published>
+                  <updated></updated>
+                  <id>https://maxvoltar.photo/0002-040/</id>
+                  <content type="html"><![CDATA[<figure><a href="https://maxvoltar.photo/0002-040/"><img src="https://maxvoltar.photo/qq/photos/large/0002-040-686656.webp" alt="0002-040" /></a></figure>
+                  ]]>
+                </content>
+                <author>
+                  <name><![CDATA[Tim Van Damme]]></name>
+                  <email>tim@maxvoltar.be</email>
+                  <uri>https://maxvoltar.com</uri>
+                </author>
+                <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://maxvoltar.photo/qq/photos/large/0002-040-686656.webp" />
+                  <media:content medium="image" url="https://maxvoltar.photo/qq/photos/large/0002-040-686656.webp" xmlns:media="http://search.yahoo.com/mrss/" />
+                  </entry>
+                  <entry>
+                    <title type="html">0001-jon-ly-487338-unsplash-768x432</title>
+                    <link href="https://maxvoltar.photo/0001-jon-ly-487338-unsplash-768x432/" rel="alternate" type="text/html" title="0001-jon-ly-487338-unsplash-768x432" />
+                    <published></published>
+                    <updated></updated>
+                    <id>https://maxvoltar.photo/0001-jon-ly-487338-unsplash-768x432/</id>
+                    <content type="html"><![CDATA[<figure><a href="https://maxvoltar.photo/0001-jon-ly-487338-unsplash-768x432/"><img src="https://maxvoltar.photo/qq/photos/large/0001-jon-ly-487338-unsplash-768x432-686656.webp" alt="0001-jon-ly-487338-unsplash-768x432" /></a></figure>
+                    ]]>
+                  </content>
+                  <author>
+                    <name><![CDATA[Tim Van Damme]]></name>
+                    <email>tim@maxvoltar.be</email>
+                    <uri>https://maxvoltar.com</uri>
+                  </author>
+                  <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://maxvoltar.photo/qq/photos/large/0001-jon-ly-487338-unsplash-768x432-686656.webp" />
+                    <media:content medium="image" url="https://maxvoltar.photo/qq/photos/large/0001-jon-ly-487338-unsplash-768x432-686656.webp" xmlns:media="http://search.yahoo.com/mrss/" />
+                    </entry>
+                  </feed>
