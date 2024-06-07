@@ -13,12 +13,16 @@ jobs:
       run: sudo apt-get install imagemagick
 
 
+
+
     - name: Rename Images
       run: |
        count=1
-       while IFS= read -r -d '' file; do
-        date=$(identify -verbose "$file" | grep "exif:DateTimeOriginal:" | awk '{print $2}' | sed 's/:/-/g' | sed 's/ //g')
-        if [ ! -z "$date" ]; then
+        while IFS= read -r -d '' file; do
+        # Extract the original date from image metadata
+         date=$(identify -verbose "$file" | grep "exif:DateTimeOriginal:" | awk '{print $2}' | sed 's/:/-/g' | sed 's/ //g')
+       # Generate a random name if the date is available
+       if [ ! -z "$date" ]; then
         formattedDate=$(date -d "$date" +'%Y%m%d')
         randomNumber=$(shuf -i 1-1000 -n 1)
         newName="${formattedDate}${randomNumber}-${file##*/}"
@@ -26,8 +30,11 @@ jobs:
         newName=$(printf "%04d-%s" "$count" "${file##*/}")
         ((count++))
        fi
+       # Replace non-ASCII characters with random English letters
+       newName=$(echo "$newName" | perl -CSD -pe 's/[\x{4e00}-\x{9fff}]/chr(97 + int(rand(26)))/ge')
+       # Move and rename the file
        mv "$file" "$(dirname "$file")/$newName"
-       done < <(find . -type f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png \) -print0)
+       done < <(find . -type  f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png \) -print0)
 
 
     - name: Setup Node.js
