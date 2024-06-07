@@ -12,21 +12,23 @@ jobs:
     - name: Install ImageMagick
       run: sudo apt-get install imagemagick
 
+
     - name: Rename Images
       run: |
-        count=1
-        for file in $(find . -type f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png \)); do
-          date=$(identify -verbose "$file" | grep "exif:DateTimeOriginal:" | awk '{print $2}' | sed 's/:/-/g' | sed 's/ //g')
-          if [ ! -z "$date" ]; then
-            formattedDate=$(date -d "$date" +'%Y%m%d')
-            randomNumber=$(shuf -i 1-1000 -n 1)
-            newName="${formattedDate}${randomNumber}-${file##*/}"
-          else
-            newName=$(printf "%04d-%s" $count "${file##*/}")
-            ((count++))
-          fi
-          mv "$file" "$(dirname "$file")/$newName"
-        done
+       count=1
+       while IFS= read -r -d '' file; do
+        date=$(identify -verbose "$file" | grep "exif:DateTimeOriginal:" | awk '{print $2}' | sed 's/:/-/g' | sed 's/ //g')
+        if [ ! -z "$date" ]; then
+        formattedDate=$(date -d "$date" +'%Y%m%d')
+        randomNumber=$(shuf -i 1-1000 -n 1)
+        newName="${formattedDate}${randomNumber}-${file##*/}"
+       else
+        newName=$(printf "%04d-%s" "$count" "${file##*/}")
+        ((count++))
+       fi
+       mv "$file" "$(dirname "$file")/$newName"
+       done < <(find . -type f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png \) -print0)
+
 
     - name: Setup Node.js
       uses: actions/setup-node@v2
